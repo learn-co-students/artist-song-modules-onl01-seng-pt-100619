@@ -1,11 +1,7 @@
-module Memorable
+module Findable
   module ClassMethods
-    def reset_all
-      self.all.clear
-    end
-
-    def count
-      self.all.count
+    def find_by_name(name)
+      self.all.detect{|o| o.name}
     end
   end
 
